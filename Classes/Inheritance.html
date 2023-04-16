@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Classes are not Hoisted</h1>
+        <p>You will get an error if you try to use a class before it is declared.</p>
+
+        <p id="demo"></p>
+        <script>
+            //You cannot use the class yet.
+            //myCar = new Car("Ford") will raise an error.
+
+            class Car {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+            }
+
+            //Now you can use the class:
+            const myCar = new Car("Ford");
+            document.getElementById("demo").innerHTML = myCar.carname;
+        </script>
+    </body>
+</html>
